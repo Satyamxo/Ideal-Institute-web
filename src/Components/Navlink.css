@@ -1,0 +1,38 @@
+.nav-link {
+    position: relative;
+    color: #2c3e50; /* Adjusted to a theme color */
+    font-weight: normal;
+    text-decoration: none;
+    padding: 4px 0;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+/* Underline effect */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ec1f22; /* Theme color */
+    transition: width 0.3s ease;
+}
+
+/* Active and hover state */
+.nav-link.active,
+.nav-link:hover {
+    color: #ec1f22; /* Theme color */
+    font-weight: bold;
+}
+
+/* Underline expands on hover and active */
+.nav-link.active::after,
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Glowing effect for active text */
+.glow-text {
+    text-shadow: 0 0 10px rgb(255, 238, 128); /* Adjust as needed */
+}

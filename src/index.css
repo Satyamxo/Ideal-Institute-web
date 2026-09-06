@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './slick-imports.css';
+
+/* Custom CSS rules */
+.body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Example gradient */
+}
+
+.animate-fade-in {
+    animation: fadeIn 2s ease-out;
+}
+
+.theme {
+    background: #ec1f22;
+}
+
+.text-shadow-lg {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 
+                 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.text-shadow-highlight {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), 
+                 0 0 2px rgba(0, 0, 0, 0.2),
+                 0 0 5px #ec1f22;
+}
+
+
+.glowing-button {
+  background-color: #ec1f22; /* Button background color */
+  color: white; /* Text color */
+  padding: 12px 24px; /* Adjust padding as needed */
+  border-radius: 9999px; /* Fully rounded */
+  box-shadow: 0 0 10px rgba(236, 31, 34, 0.8), 0 0 20px rgba(236, 31, 34, 0.6); /* Glowing effect */
+  font-size: 1rem; /* Adjust font size as needed */
+  font-weight: 600; /* Adjust font weight as needed */
+  display: flex; /* Flex display for icon and text alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  animation: glow-size-change 2s infinite; /* Apply the animation */
+}
+
+.glowing-button:hover {
+  background-color: #fbd301; /* Change background color on hover */
+}
+
+.glowing-button svg {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+@keyframes glow-size-change {
+  0% {
+    transform: scale(1); /* Initial size */
+    box-shadow: 0 0 10px rgba(236, 31, 34, 0.8), 0 0 20px rgba(236, 31, 34, 0.6);
+  }
+  50% {
+    transform: scale(1.1); /* Enlarged size */
+    box-shadow: 0 0 15px rgba(236, 31, 34, 0.9), 0 0 25px rgba(236, 31, 34, 0.7);
+  }
+  100% {
+    transform: scale(1); /* Return to initial size */
+    box-shadow: 0 0 10px rgba(236, 31, 34, 0.8), 0 0 20px rgba(236, 31, 34, 0.6);
+  }
+}
